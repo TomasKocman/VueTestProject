@@ -4,10 +4,22 @@
 <head>
     <meta charset="utf-8">
     <title>test2</title>
+    <link rel="stylesheet" href="src/styles/styles.css">
 </head>
 
 <body>
     <div id="app">
+        <h3>Syllabus</h3>
+        <transition-group tag="ul">
+            <li v-for="topic in syllabus" v-bind:key="topic">
+                <button v-on:click="completed(topic)">Done</button>{{topic}}
+            </li>
+        </transition-group>
+
+        <h3>Bus station simulator</h3>
+        <transition-group tag="p" name="station">
+            <span v-for="bus in buses" v-bind:key="bus">🚌</span>
+        </transition-group>
     </div>
 
     <script src="/dist/build.js"></script>

@@ -1,0 +1,29 @@
+.v-leave-active {
+    transition: all 1s;
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.station-leave-active, .station-enter-active {
+    transition: all 2s;
+    position: absolute;
+}
+
+.station-leave-to {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.station-enter {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.station-move {
+    transition: 2s;
+}
+
+span {
+    display: inline-block;
+    margin: 3px;
+}
