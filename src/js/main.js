@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-
+// App1
 new Vue({
     el: '#app',
     data: {
@@ -28,7 +28,7 @@ new Vue({
     }
 });
 
-
+// App2
 new Vue({
     el: '#app2',
     data: {
@@ -53,4 +53,35 @@ new Vue({
         }
     }
 
+});
+
+// App3
+new Vue({
+    el: '#app3',
+    data: {
+        kisses: 0,
+        kindOfTransformation: 'fade',
+        transformationMode: 'in-out'
+    },
+    computed: {
+        transformation() {
+            if (this.kisses < 3)
+                return 'frog';
+            else if (this.kisses >= 3 && this.kisses <= 5) {
+                this.transformationMode = 'out-in';
+                return 'princess';
+            }
+            else if (this.kisses > 5) {
+                this.kindOfTransformation = 'zoom';
+                return 'santa'
+            }
+        }
+    },
+    emoji() {
+        switch (this.transformation) {
+            case 'frog':     return '🐸';
+            case 'princess': return '👸';
+            case 'santa':    return '🎅';
+        }
+    }
 });

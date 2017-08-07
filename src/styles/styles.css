@@ -1,3 +1,4 @@
+/* #app */
 .v-leave-active {
     transition: all 1s;
     opacity: 0;
@@ -28,12 +29,35 @@ span {
     margin: 3px;
 }
 
-
+/* #app2 */
 .ball {
     width: 3em;
     height: 3em;
     background-color: red;
     border-radius: 50%;
     position: absolute;
-    left: 10em;
+    left: 60em;
+}
+
+/* #app3 */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-active {
+    opacity: 0;
+}
+
+.zoom-leave-active, .zoom-enter-active {
+    transition: transform .5s;
+}
+
+.zoom-leave-active, .zoom-enter {
+    transform: scale(0);
+}
+
+.p-style {
+    margin: 0;
+    position: absolute;
+    font-size: 3em;
 }

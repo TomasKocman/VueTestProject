@@ -23,8 +23,16 @@
         </transition-group>
     </div>
     <div id="app2">
+        <h3>Bounce</h3>
         <input type="number" @input="move">
-        <div class="ball" :style="'top: ' + height + 'em'"></div>
+        <div class="ball" v-bind:style="'top: ' + height + 'em'"></div>
+    </div>
+    <div id="app3">
+        <h3>Change frog to princess</h3>
+        <button v-on:click="kisses++">💋Kiss</button>
+        <transition v-bind:name="kindOfTransformation" v-bind:mode="transformationMode">
+            <p class="p-style" v-bind:key="transformation">{{emoji}}{{transformation}}</p>
+        </transition>
     </div>
 
     <script src="/dist/build.js"></script>
