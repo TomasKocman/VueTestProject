@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>test2</title>
     <link rel="stylesheet" href="src/styles/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/16.3.5/Tween.min.js"></script>
 </head>
 
 <body>
@@ -20,6 +21,10 @@
         <transition-group tag="p" name="station">
             <span v-for="bus in buses" v-bind:key="bus">🚌</span>
         </transition-group>
+    </div>
+    <div id="app2">
+        <input type="number" @input="move">
+        <div class="ball" :style="'top: ' + height + 'em'"></div>
     </div>
 
     <script src="/dist/build.js"></script>

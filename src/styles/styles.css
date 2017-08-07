@@ -27,3 +27,13 @@ span {
     display: inline-block;
     margin: 3px;
 }
+
+
+.ball {
+    width: 3em;
+    height: 3em;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    left: 10em;
+}
