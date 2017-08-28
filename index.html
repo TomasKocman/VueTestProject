@@ -10,29 +10,20 @@
 
 <body>
     <div id="app">
-        <h3>Syllabus</h3>
-        <transition-group tag="ul">
-            <li v-for="topic in syllabus" v-bind:key="topic">
-                <button v-on:click="completed(topic)">Done</button>{{topic}}
-            </li>
-        </transition-group>
+        <light-bulb></light-bulb>
+        <light-bulb></light-bulb>
+        <light-bulb></light-bulb>
+    </div>
 
-        <h3>Bus station simulator</h3>
-        <transition-group tag="p" name="station">
-            <span v-for="bus in buses" v-bind:key="bus">🚌</span>
-        </transition-group>
-    </div>
     <div id="app2">
-        <h3>Bounce</h3>
-        <input type="number" @input="move">
-        <div class="ball" v-bind:style="'top: ' + height + 'em'"></div>
+        <label>Sound level</label>
+        <input type="number" v-model.number="soundLevel">
+        <sound-icon v-bind:level="soundLevel"></sound-icon>
     </div>
+
     <div id="app3">
-        <h3>Change frog to princess</h3>
-        <button v-on:click="kisses++">💋Kiss</button>
-        <transition v-bind:name="kindOfTransformation" v-bind:mode="transformationMode">
-            <p class="p-style" v-bind:key="transformation">{{emoji}}{{transformation}}</p>
-        </transition>
+        <blabber v-bind:ice-breaker="true"></blabber>
+        <blabber></blabber>
     </div>
 
     <script src="/dist/build.js"></script>
